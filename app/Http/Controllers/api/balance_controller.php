@@ -28,5 +28,8 @@ class balance_controller extends Controller
 
 	    return response()->json(['data'=>$data]);
     }
-    
+    public function test()
+    {
+        return response()->json(['data'=>'data']);
+    }
 }

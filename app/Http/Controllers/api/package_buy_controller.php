@@ -10,7 +10,7 @@ class package_buy_controller extends Controller
 {
     public function package_buy(Request $request)
     {
-    	 $url=env('BASE_URL');
+    	 $url=env('TEST_URL');
         $rules=array(
         'PhoneNumber'=>'required',
           'PackageCode'=>'required',
@@ -39,7 +39,7 @@ class package_buy_controller extends Controller
         
 
 	  $client = new \GuzzleHttp\Client();
-    $res = $client->request('POST',$url.'/package/buytest', [
+    $res = $client->request('POST',$url.'/api/package/buytest', [
     			'form_params' => [
     				'PhoneNumber'=> $PhoneNumber,
     				'PackageCode'=> $PackageCode,

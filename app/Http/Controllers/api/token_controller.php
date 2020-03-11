@@ -12,7 +12,7 @@ class token_controller extends Controller
       {
 
       	// https://teleapi.prepaidcard.com.mm/Token
-        $url=env('BASE_URL');
+        $url=env('TEST_URL');
         $rules=array(
         'grant_type'=>'required',
           'username'=>'required',
